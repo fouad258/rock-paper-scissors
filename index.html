@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+</head>
+<body>
+  <script>
+    // Your JavaScript goes here!
+    let playerscore = 0;
+    let computerscore = 0;
+    let winner = "";
+    function getComputerChoice() {
+      const options = ['rock', 'paper', 'scissors'];
+      return options[Math.floor(Math.random() * options.length)]   
+    }
+    function Round(playerSelection ,ComputerChoice ) {
+     if (playerSelection === ComputerChoice){
+      winner= "it's a tie " ; 
+     }
+     if((playerSelection === "scissors" &&  ComputerChoice==="paper")||
+     (playerSelection === "rock" &&  ComputerChoice==="scissors")||    
+     (playerSelection === "paper" &&  ComputerChoice==="rock")){
+       playerscore++;
+       winner="playerSelection";
+     }else if ((ComputerChoice === "scissors" &&  playerSelection==="paper")||
+     (ComputerChoice === "rock" &&  playerSelection==="scissors")||    
+     (ComputerChoice === "paper" &&  playerSelection==="rock")) {
+       computerscore++;
+       winner="ComputerChoice";
+     }
+    }
+    let playerSelection = prompt("start by picking one of the three ' Rock , paper and scissors'").toLowerCase();
+    let  ComputerChoice= getComputerChoice();
+    function game(){ 
+      for (let i = 0; i < 5; i++) {
+        playerSelection = prompt(`Round ${i+1} , pick one of the three: Rock , Paper or scissors`).toLowerCase();
+        let result = Round(playerSelection ,ComputerChoice);
+       if(playerscore > computerscore){
+        winner = "you win !";
+       } else if(playerscore < computerscore){
+        winner ="computer wins !"
+       }else{
+        winner = "Draw";
+       }
+      
+      console.log(winner,playerscore,computerscore);
+      }
+    }
+      game();
+  </script>
+</body>
+</html>
