@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+#container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.7em;
+    border: 0.2em solid  white;
+    background-color: rgb(208, 255, 0);
+}
+#main-title{
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 1.2em;
+    word-spacing:0.2em;
+}
+#player-option-box{
+    margin: 1.5em 0;
+    width: 100vw;
+}
+.images{
+    cursor: pointer;
+    height: 13em;
+}
+.images:hover{
+    transform: scale(1.1);
+}
+#Scissors{
+    padding-left: 1.3em;
+}
+#page-board{
+    width: 19em;
+}
+#cpu-choice{
+    text-transform: uppercase;
+    word-spacing: 0.1em;
+    line-height: 1.1em;
+    font-size: 0.95em;
+}
+#cpu-result{
+    font-weight: 700;
+}
+#game-output{
+    text-transform: uppercase;
+    line-height: 2.5em;
+    font-weight: 600;
+    font-size: 0.9em;
+    margin-top: 0.6em;
+    letter-spacing: -0.3px;
+}
+.player-avatar{
+    height: 14px;
+}
+.computer-avatar{
+    height: 14px;
+}
+#Reload-icon{
+   width: 20%;
+   cursor: pointer;
+   transition: all 0.3s ease-in-out 0s;
+   margin: 1.1em 0 0 0.2em ;
+}
+#Reload-icon{
+    transform: rotate(140deg);
+}
